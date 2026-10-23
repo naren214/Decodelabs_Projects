@@ -1,3 +1,6 @@
+import math
+
+
 def main():
     expenses = []
     total = 0.0
@@ -14,15 +17,16 @@ def main():
 
         try:
             amount = float(entry)
-            if amount < 0:
-                print("Please enter a non-negative amount.\n")
+            new_total = total + amount
+            if not math.isfinite(amount) or amount < 0 or not math.isfinite(new_total):
+                print("Please enter a finite, non-negative amount that keeps the total finite.\n")
                 continue
         except ValueError:
             print("Invalid input. Please enter a number or 'q' to quit.\n")
             continue
 
         expenses.append(amount)
-        total += amount
+        total = new_total
         print(f"Added: {amount:.2f}")
         print(f"Running total: {total:.2f}\n")
 

@@ -4,7 +4,7 @@ A polished command-line Expense Tracker built in Python for DecodeLabs Project 2
 
 ## Features
 - Add expenses one by one
-- Prevent invalid or negative input
+- Reject invalid, negative, non-finite, and total-overflowing input
 - Show a running total after each entry
 - Display all expenses with numbering
 - Show total, count, average, highest, and lowest expense
@@ -12,5 +12,5 @@ A polished command-line Expense Tracker built in Python for DecodeLabs Project 2
 
 ## How to run
 ```bash
-python expensetracker.py
+python ExpenseTracker_Project_2.py
 ```
